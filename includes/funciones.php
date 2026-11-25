@@ -68,7 +68,7 @@ function guardar_foto($archivo, &$error) {
         return null;
     }
     $nombre = bin2hex(random_bytes(8)) . '.' . $permitidos[$mime];
-    if (!move_uploaded_file($archivo['tmp_name'], __DIR__ . '/../uploads/' . $nombre)) {
+    if (!move_uploaded_file($archivo['tmp_name'], __DIR__ . '/../archivos/' . $nombre)) {
         $error = 'No se pudo guardar la foto.';
         return null;
     }
